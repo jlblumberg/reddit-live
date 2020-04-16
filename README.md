@@ -4,4 +4,4 @@ Practiced using components and hooks to save state and fetch details from an API
 
 The app pulls in posts from the subReddit 'r/reactjs', and tells you how many upvotes they each have.
 
-Check out the production version [here](true-branch.surge.sh).
+Check out the production version [here](http://true-branch.surge.sh).
