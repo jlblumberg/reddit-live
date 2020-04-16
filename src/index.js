@@ -3,9 +3,7 @@ import ReactDom from 'react-dom';
 import "./index.css";
 
 function Room() {
-  const state = useState(false);
-  const isLit = state[0];
-  const setLit = state[1];
+  const [isLit, setLit] = useState(false);
   const brightness = isLit ? "lit" : "dark";
 
   return (
