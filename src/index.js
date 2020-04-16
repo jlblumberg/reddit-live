@@ -10,8 +10,11 @@ function Room() {
     <div className={`room ${brightness}`}>
       The room is {brightness}
       <br/>
-      <button onClick={() => setLit(!isLit)}>
-        flip
+      <button onClick={() => setLit(true)}>
+        On
+      </button>
+      <button onClick={() => setLit(false)}>
+        Off
       </button>
     </div>
   );
