@@ -1,22 +1,18 @@
-import React, { useState } from 'react';
-import ReactDom from 'react-dom';
-import "./index.css";
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
 
-function Room() {
-  const [isLit, setLit] = useState(false);
-  const brightness = isLit ? "lit" : "dark";
-  const [temp, setTemp] = useState(22)
-
+function Reddit() {
+  const [posts, setPosts] = useState([]);
   return (
-    <div className={`room ${brightness}`}>
-      The room is {brightness} <br />
-      It is {temp} degrees in here <br />
-      <button onClick={() => setLit(true)}>Lights on</button>
-      <button onClick={() => setLit(false)}>Lights off</button><br />
-      <button onClick={() => setTemp(temp + 1)}>Temp +</button>
-      <button onClick={() => setTemp(temp - 1)}>Temp -</button>
+    <div>
+      <h1>/r/reactjs</h1>
+      <ul>
+        {posts.map(post => (
+          <li key={post.id}>{post.title}</li>
+        ))}
+      </ul>
     </div>
   );
 }
 
-ReactDom.render(<Room/>, document.getElementById('root'));
+ReactDOM.render(<Reddit/>, document.getElementById("root"));
